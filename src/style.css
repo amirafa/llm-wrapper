@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     height: 100vh;
     padding: 32px;
-    background-color: #020617;
+    background-color: #000000;
     overflow-y: hidden;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 
 #container {
-    background-color: #1f2937;
+    background-color: #242424;
     padding: 32px;
     border-radius: 16px;
     height: 100vh;
