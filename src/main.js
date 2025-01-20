@@ -5,16 +5,6 @@ const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL = import.meta.env.VITE_SERVER_API_URL;
 const IPIFY_TOKEN = import.meta.env.VITE_IPIFY_TOKEN;
 
-// Lang
-let ln = "fa";
-const lnKey = "rafini-ln";
-
-if (!localStorage.getItem(lnKey)) {
-    localStorage.setItem(lnKey, "fa");
-} else {
-    ln = localStorage.getItem(lnKey);
-}
-
 const dic = {
     NAME: {
         en: "Rafini ✨️",
@@ -25,7 +15,7 @@ const dic = {
         fa: "جمنای فلش ۲",
     },
     INITIAL_RESPONSE: {
-        en: "Hey, What can i do for you?",
+        en: "",
         fa: "سلام، چکار میتونم برات بکنم؟",
     },
     CHAT_PLACEHOLDER: {
@@ -80,9 +70,7 @@ let chat = model.startChat({
 let question = "";
 let response = "";
 document.getElementById("question-blob").innerHTML = `<p>...</p>`;
-document.getElementById("response").innerHTML = `<p>${i18n(
-    dic.INITIAL_RESPONSE
-)}</p>`;
+document.getElementById("response").innerHTML = `<p>Hey, What can i do for you?</p>`;
 document.getElementById("name").innerHTML = i18n(dic.NAME);
 document.getElementById("description").innerHTML = i18n(dic.DESC);
 document.getElementById("prompt-textarea").placeholder = i18n(

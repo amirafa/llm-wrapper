@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rafini Flash 2.0</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Vazirmatn:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" type="text/css" href="/src/style.css" />
+    </head>
+    <body>
+        <div id="container">
+            <!-- title -->
+            <div id="title">
+                <span id="name"></span>
+                <span
+                    id="description"
+                    style="font-weight: 400; font-size: 16px"
+                >
+                    Gemini Flash 2.0
+                </span>
+            </div>
+
+            <!-- Response Section -->
+            <div style="display: flex">
+                <img
+                    src="https://api.iconify.design/material-symbols:person-rounded.svg"
+                    style="
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 4px;
+                        filter: invert(1);
+                    "
+                />
+
+                <span id="question-blob" dir="auto"></span>
+            </div>
+
+            <div style="display: flex">
+                <div id="response-blob">
+                    <span id="response" dir="auto" style="width: 100%"></span>
+                </div>
+                <img
+                    src="https://api.iconify.design/healthicons:artificial-intelligence.svg"
+                    style="
+                        width: 32px;
+                        height: 32px;
+                        margin-left: 4px;
+                        filter: invert(1);
+                    "
+                />
+            </div>
+
+            <!-- Prompt Section -->
+            <div>
+                <div id="prompt-section" class="relative">
+                    <textarea
+                        id="prompt-textarea"
+                        rows="1"
+                        dir="auto"
+                        class="hide-scrollbar"
+                    ></textarea>
+                    <button id="new-button">
+                        <img
+                            src="https://api.iconify.design/material-symbols:chat-add-on.svg"
+                            style="
+                                width: 24px;
+                                height: 24px;
+                                filter: invert(1);
+                                margin-top: 4px;
+                            "
+                        />
+                    </button>
+                    <button id="prompt-button">
+                        <img
+                            src="https://api.iconify.design/healthicons:artificial-intelligence.svg"
+                            style="width: 32px; height: 32px; filter: invert(1)"
+                        />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
