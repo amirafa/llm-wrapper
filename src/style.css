@@ -1,0 +1,200 @@
+body {
+    font-family: "Montserrat","Vazirmatn", "Iran Sans", "Tahoma", "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 32px;
+    background-color: #020617;
+    overflow-y: hidden;
+}
+
+:lang(fa) {
+    font-family: "Vazirmatn", "Iran Sans", system-ui, sans-serif;
+}
+
+:lang(en) {
+    font-family: "Montserrat", system-ui, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 2px;
+    }
+
+    #container {
+        padding: 8px !important;
+        margin-bottom: 90px !important;
+    }
+
+    #question-blob {
+        margin-right: 8px !important;
+    }
+
+    #response-blob {
+        margin-left: 8px !important;
+    }
+}
+
+#container {
+    background-color: #1f2937;
+    padding: 32px;
+    border-radius: 16px;
+    height: 100vh;
+    margin-bottom: 120px;
+    overflow-y: auto;
+}
+
+#title {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #aab0bb;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#prompt-section {
+    -webkit-box-shadow: 0px -9px 22px -15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -9px 22px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -9px 22px -15px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #262626;
+}
+
+#new-button {
+    position: absolute;
+    border-radius: 32px;
+    margin-right: 20px;
+    border: 1px solid #3b3b3b;
+    background-color: #3b3b3b;
+    right: 76px;
+    width: 42px;
+    height: 42px;
+}
+
+#new-button:hover {
+    border: 2px solid #383838;
+    background-color: #383838;
+    cursor: pointer;
+}
+
+#prompt-button {
+    border-radius: 32px;
+    margin-right: 20px;
+    border: 2px solid #3b3b3b;
+    background-color: #3b3b3b;
+    width: 51px;
+    height: 51px;
+}
+
+#prompt-button:hover {
+    border: 2px solid #383838;
+    background-color: #383838;
+    cursor: pointer;
+}
+
+#prompt-textarea {
+    padding-block: 16px;
+    padding-left: 32px;
+    padding-right: 58px;
+    border-radius: 32px;
+    background-color: #474e58;
+    color: #e6e6e6;
+    border: none;
+    font-size: 16px;
+    flex: 1;
+    resize: none;
+}
+
+#prompt-textarea:focus {
+    outline: 2px solid #4a90e2; /* Blue border */
+}
+
+#question-blob {
+    color: #f8fafc;
+    margin-right: 64px;
+    padding-inline: 32px;
+    padding-block: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border: none;
+    margin-bottom: 8px;
+    background-color: #94a3b879;
+    display: flex;
+    flex-grow: 1;
+    white-space: pre-line;
+}
+
+#response-blob {
+    margin-left: 64px;
+    padding-inline: 32px;
+    padding-block: 0px;
+    color: #f8fafc;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 16px;
+    background-color: #94a3b879;
+    display: flex;
+    flex-grow: 1;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #020617;
+    border-radius: 50%;
+    outline: none;
+    background-color: #1f2937;
+    cursor: pointer;
+}
+input[type="radio"]:checked {
+    background-color: #e3c044;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::placeholder {
+    /* Modern browsers */
+    color: #f8fafc;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Safari/Opera */
+    color: #f8fafc;
+}
+
+::-moz-placeholder {
+    /* Firefox */
+    color: #f8fafc;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #f8fafc;
+}
