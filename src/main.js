@@ -1,7 +1,17 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { marked } from "marked";
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+let API_KEY = "";
+let google_api_key = prompt(
+    "Please enter google_api_key:",
+    ""
+);
+
+if (google_api_key == null || google_api_key == "") {
+    window.location.reload()
+} else {
+    API_KEY = google_api_key;
+}
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
