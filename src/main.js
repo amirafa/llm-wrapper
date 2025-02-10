@@ -45,7 +45,7 @@ document
     });
 
 document.getElementById("new-button").addEventListener("click", () => {
-    if (confirm("یه چت دیگه شروع کنم؟")) {
+    if (confirm("start new chat?")) {
         window.location.reload();
     }
 });
